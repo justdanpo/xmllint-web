@@ -5,6 +5,18 @@ mkdir -p ./libxml2/m4
 cd ./libxml2
 autoreconf -if -Wall
 cd ../build
-emconfigure ../libxml2/configure --with-http=no --with-ftp=no --with-python=no --with-threads=no
+emconfigure ../libxml2/configure  \
+  --without-python \
+  --without-debug \
+  --without-output \
+  --without-threads \
+  --without-modules \
+  --without-tree \
+  --without-html \
+  --without-sax1 \
+  --with-minimum \
+  --with-reader \
+  --with-schemas \
+  --disable-shared
 emmake make
 cd ..

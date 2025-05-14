@@ -2,16 +2,17 @@
 Module['preRun'] = function () {
 	var i
 	;
+	const dontAddNull = true;
 	//Clamping this to `1` xml file for the moment since it's unclear how best to format the return value to support multiple xml files.
 	for (i = 0; i < (1 || Module['xml'].length); i++) {
-		FS.createDataFile('/', 'file_' + i + '.xml', Module['intArrayFromString'](Module['xml'][i]), true, true);
+		FS.createDataFile('/', 'file_' + i + '.xml', intArrayFromString(Module['xml'][i], dontAddNull), true, true);
 	}
 	for (i = 0; i < Module['schema'].length; i++) {
-		FS.createDataFile('/', 'file_' + i + '.xsd', Module['intArrayFromString'](Module['schema'][i]), true, true);
+		FS.createDataFile('/', 'file_' + i + '.xsd', intArrayFromString(Module['schema'][i], dontAddNull), true, true);
 	}
 };
 
-Module.arguments = ['--noout', '--quiet'];
+Module.arguments = ['--noout', '--quiet', '--stream'];
 
 (function () {
 	var i
