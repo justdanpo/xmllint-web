@@ -1,13 +1,12 @@
-var xmllint = {}
-;
+const xmllint = {};
 
 xmllint.validateXML = function (options) {
 	var Module = {
 		xml: options.xml,
 		schema: options.schema,
 		TOTAL_MEMORY: options.TOTAL_MEMORY
-	}
-	;
+	};
+
   if (options.format === 'rng') {
 		Module['extension'] = '--relaxng';
 	} else {
@@ -16,7 +15,7 @@ xmllint.validateXML = function (options) {
 
 	/* XMLLINT.RAW.JS */
 
-	Module['return'] = Module['return'].split('\n').slice(0,-2);
+	Module['return'] = Module['return'].split('\n').slice(0,-1);
 
 	// Do this in a JSLint style way...
 	return {
@@ -24,8 +23,6 @@ xmllint.validateXML = function (options) {
 	};
 }
 
-if ("undefined" === typeof window) {
-	if ("undefined" !== typeof module) {
-		module.exports = xmllint;
-	}
+if ("undefined" !== typeof module) {
+	module.exports = xmllint;
 }

@@ -11,7 +11,7 @@ Module['preRun'] = function () {
 	}
 };
 
-Module.arguments = ['--noout'];
+Module.arguments = ['--noout', '--quiet'];
 
 (function () {
 	var i
