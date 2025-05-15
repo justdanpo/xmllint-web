@@ -1,5 +1,5 @@
 {
-  "name": "xmllint",
+  "name": "@justdanpo/xmllint",
   "version": "0.1.1",
   "description": "Online demo at http://syssgx.github.com/xml.js/",
   "main": "xmllint.js",
@@ -21,15 +21,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kripken/xml.js"
+    "url": "https://github.com/justdanpo/xmllint-web"
   },
   "author": "kripken",
   "contributors": [
     "kripken",
     "sterpe"
   ],
+  "files": ["xmllint.js", "index.d.ts"],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kripken/xml.js/issues"
+    "url": "https://github.com/justdanpo/xmllint-web/issues"
   }
 }
