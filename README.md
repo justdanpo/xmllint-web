@@ -36,8 +36,17 @@ Usable with Browserify via `browserify-shim`.
 
 #### Building xmllint from source ####
 
-Install emscripten.
+Setup emscripten
+```
+	git clone https://github.com/emscripten-core/emsdk.git
+	cd emsdk
+	git checkout 3.1.29
+	./emsdk install 1.40.1-fastcomp
+	./emsdk activate 1.40.1-fastcomp
+	source emsdk_env.sh
+```
 
+Build
 ```
 	git clone
 	git submodule init

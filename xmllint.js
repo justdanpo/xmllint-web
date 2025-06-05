@@ -1,4 +1,4 @@
-const xmllint = {};
+export const xmllint = {};
 
 xmllint.validateXML = function (options) {
 	var Module = {
@@ -48,8 +48,4 @@ var ea=[ux,vx,xa,ya,za,wx,xx,yx,zx,Ax,Bx,Cx,Dx,Ex,Fx,Gx,Hx,Ix,Jx,Kx,Lx,Mx,Nx,Ox,
 	return {
 		errors: Module['return'].length ? Module['return'] : null
 	};
-}
-
-if ("undefined" !== typeof module) {
-	module.exports = xmllint;
 }
